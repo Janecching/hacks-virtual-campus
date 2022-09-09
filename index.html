@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css" type="text/css">
+
 </head>
 
 <body>
@@ -27,6 +28,18 @@
         </div>
     </div>
 
+    <!-- chatting div starts here -->
+    <div id="chat">
+        <!-- messages will display here -->
+        <ul id="messages"></ul>
+
+        <!-- form to send message -->
+        <form id="message-form">
+            <input id="message-input" type="text" />
+            <button id="message-btn" type="submit">Send</button>
+        </form>
+    </div>
+    <!-- chatting div ends here -->
 
     <!-- // NOTE - INCLUDE YOUR FIREBASE CONFIG HERE FOR ANYTHING TO WORK:
     // Your web app's Firebase configuration -->
@@ -35,14 +48,9 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
     <script>
         const firebaseConfig = {
-            apiKey: "AIzaSyBjJimudgcqDsa_SyJDpcSgSVIl6WQxAHM",
-            authDomain: "virtualcampus-2ec3a.firebaseapp.com",
-            databaseURL: "https://virtualcampus-2ec3a-default-rtdb.firebaseio.com",
-            projectId: "virtualcampus-2ec3a",
-            storageBucket: "virtualcampus-2ec3a.appspot.com",
-            messagingSenderId: "7302791485",
-            appId: "1:7302791485:web:df19c2fefb4b04352f8554"
+            blah
         };
+
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
     </script>
