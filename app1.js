@@ -25,6 +25,46 @@ const mapData = {
 const name = "Ian";
 
 const playerColors = ["blue", "red", "orange", "yellow", "green", "purple"];
+
+
+// -------begin chatting section
+const db = firebase.database();
+document.getElementById("message-form").addEventListener("submit", sendMessage);
+const fetchChat = db.ref("messages/");
+const username = name;
+
+function sendMessage(e) {
+    e.preventDefault();
+
+    // get values to be submitted
+    const timestamp = Date.now();
+    const messageInput = document.getElementById("message-input");
+    const message = messageInput.value;
+
+    // clear the input box
+    messageInput.value = "";
+
+    //auto scroll to bottom
+    document
+        .getElementById("messages")
+        .scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+
+    // create db collection and send in the data
+    db.ref("messages/" + timestamp).set({
+        username,
+        message,
+    });
+}
+
+fetchChat.on("child_added", function (snapshot) {
+    const messages = snapshot.val();
+    const message = `<li class=${username === messages.username ? "sent" : "receive"
+        }><span>${messages.username}: </span>${messages.message}</li>`;
+    // append the message on the page
+    document.getElementById("messages").innerHTML += message;
+});
+// -----end chatting section
+
 //Misc Helpers
 function randomFromArray(array) {
     return array[Math.floor(Math.random() * array.length)];

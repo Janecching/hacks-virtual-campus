@@ -55,7 +55,7 @@ input[type="text"] {
     padding-left: 0.5em;
     border: 3px solid #222034;
     width: 150px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 input[type="text"]:focus {
@@ -166,15 +166,16 @@ button:active {
 
 #message-form {
     text-align: center;
-    position: fixed;
+    /* position: fixed; */
     left: 0;
     bottom: 0;
     width: 100%;
     background-color: #b7b5b9;
+    text-transform: none;
 }
 
 #messages {
-    padding-bottom: 30%;
+    padding-bottom: 15%;
 }
 
 li {
@@ -197,5 +198,11 @@ li span {
 #chat {
     width: 40%;
     margin: auto;
-    margin-left: 500px;
+    margin-left: 20em;
+    overflow-y: scroll;
+    max-height: 500px;
+}
+
+#messages-input {
+    text-transform: none;
 }

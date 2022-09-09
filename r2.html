@@ -25,22 +25,12 @@
         </div>
         <div>
             <button id="player-color">Change Color</button>
+
+
         </div>
-        <button id="player-room" onclick="location.href= './r2.html'">Change Room</button>
+        <button id="player-room" onclick="location.href= './index.html'">Change Room</button>
     </div>
 
-    <!-- chatting div starts here -->
-    <div id="chat">
-        <!-- messages will display here -->
-        <ul id="messages"></ul>
-
-        <!-- form to send message -->
-        <form id="message-form">
-            <input id="message-input" type="text" />
-            <button id="message-btn" type="submit">Send</button>
-        </form>
-    </div>
-    <!-- chatting div ends here -->
 
     <!-- // NOTE - INCLUDE YOUR FIREBASE CONFIG HERE FOR ANYTHING TO WORK:
     // Your web app's Firebase configuration -->
@@ -49,15 +39,18 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
     <script>
         const firebaseConfig = {
+
             blah
+
         };
+
 
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
     </script>
 
 
-    <script src="/app1.js"></script>
+    <script src="/app.js"></script>
     <script src="/pomodoro.js"></script>
     <script src="/KeyPressListener.js"></script>
 
