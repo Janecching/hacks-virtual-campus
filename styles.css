@@ -55,7 +55,7 @@ input[type="text"] {
     padding-left: 0.5em;
     border: 3px solid #222034;
     width: 150px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 input[type="text"]:focus {
@@ -94,12 +94,12 @@ button:active {
 }
 
 
-/* .Character.you .Character_you-arrow {
+.Character.you .Character_you-arrow {
     display: block;
-} */
+}
 
 
-/* .Character_you-arrow {
+.Character_you-arrow {
     display: none;
     position: absolute;
     top: -18px;
@@ -107,7 +107,7 @@ button:active {
     width: 7px;
     height: 5px;
     background: url(/images/arrow.png) no-repeat no-repeat;
-} */
+}
 
 .Character_sprite {
     overflow: hidden;
@@ -158,42 +158,51 @@ button:active {
 }
 
 
-/* .Character_coins {
-    margin-left: 1px;
-    color: gold;
-} */
-
-
-/* Coins */
-
-
-/* .Coin_sprite {
-    background: url(/images/coin.png) no-repeat no-repeat;
-    animation: coinFloat 0.8s linear infinite alternate-reverse;
-} */
-
-
-/* @keyframes coinFloat {
-    from {
-        transform: translateY(0)
-    }
-    to {
-        transform: translateY(5px)
-    }
-}
-
-.Coin_shadow {
-    background: url(/images/coin-shadow.png) no-repeat no-repeat;
-} */
-
-
-/* :root {
-    --pomodoro: hsl(223, 25%, 40%);
-    --shortBreak: hsl(48, 23%, 40%);
-} */
-
 .clock {
     margin: auto;
     width: 60%;
     padding: 10px;
+}
+
+#message-form {
+    text-align: center;
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #b7b5b9;
+    text-transform: none;
+}
+
+#messages {
+    padding-bottom: 15%;
+}
+
+li {
+    list-style-type: none;
+    margin-bottom: 10px;
+    background-color: #6929ca;
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+    width: 50%;
+}
+
+li span {
+    font-style: italic;
+    font-weight: bolder;
+    color: #b5b0b9;
+}
+
+
+#chat {
+    width: 40%;
+    margin: auto;
+    margin-left: 20em;
+    overflow-y: scroll;
+    max-height: 500px;
+}
+
+#messages-input {
+    text-transform: none;
 }
