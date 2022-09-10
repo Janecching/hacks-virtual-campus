@@ -11,24 +11,26 @@
 
 <body>
 
-    <div class="game-container">
+    <!-- top row: player info -->
+    <div class="player-info">
+        <div class="avatar">
+            <!-- <label for="player-color">Avatar</label> -->
+            <button id="player-color">Color</button>
+        </div>
+        <div class="name">
+            <!-- <label for="player-name">Your Name</label> -->
+            <input id="player-name" maxlength="10" type="text" />
+        </div>
+        <div class="room">
+            <button id="player-room" onclick="location.href= './social.html'">Go To Social Room</button>
+        </div>
+    </div>
+
+    <div class="focus-game-container">
         <div class="clock">
             <div><span id="min-part"></span>:<span id="sec-part"></span></div>
         </div>
 
-    </div>
-
-    <div class="player-info">
-        <div>
-            <label for="player-name">Your Name</label>
-            <input id="player-name" maxlength="10" type="text" />
-        </div>
-        <div>
-            <button id="player-color">Change Color</button>
-
-
-        </div>
-        <button id="player-room" onclick="location.href= './index.html'">Change Room</button>
     </div>
 
 
@@ -39,9 +41,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
     <script>
         const firebaseConfig = {
-
-            blah
-
+            // xxx
         };
 
 

@@ -14,16 +14,8 @@ body {
     justify-content: center;
 }
 
-.game-container {
-    position: relative;
-    width: 240px;
-    height: 208px;
-    background: url(/images/classroom.png) no-repeat no-repeat;
-    background-size: 90%;
-    /* background-position: 0; */
-    transform: scale(3);
-    image-rendering: pixelated;
-}
+
+/* top row layout*/
 
 .player-info {
     position: absolute;
@@ -32,7 +24,57 @@ body {
     padding: 1em;
     display: flex;
     gap: 0.5em;
-    align-items: flex-end
+    align-items: flex-end;
+    width: 100%;
+}
+
+.avatar {
+    width: 5%;
+}
+
+.name {
+    width: 10%;
+}
+
+.room {
+    width: 20%;
+    position: absolute;
+    right: 0;
+}
+
+.focus-game-container {
+    position: bottom;
+    width: 240px;
+    height: 200px;
+    background: url(/images/classroom.png) no-repeat no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    transform: scale(3);
+    image-rendering: pixelated;
+}
+
+.social-game-container {
+    position: relative;
+    width: 240px;
+    height: 208px;
+    background: url(/images/social.png) no-repeat no-repeat;
+    background-size: 90%;
+    background-position: bottom;
+    transform: scale(3);
+    image-rendering: pixelated;
+    position: absolute;
+    left: 20%;
+}
+
+.chat-type {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1em;
+    display: flex;
+    gap: 0.5em;
+    align-items: flex-end;
+    width: 25%;
 }
 
 label {
@@ -93,11 +135,9 @@ button:active {
     z-index: 1;
 }
 
-
 .Character.you .Character_you-arrow {
     display: block;
 }
-
 
 .Character_you-arrow {
     display: none;
@@ -157,11 +197,10 @@ button:active {
     white-space: nowrap;
 }
 
-
 .clock {
     margin: auto;
-    width: 60%;
-    padding: 10px;
+    width: 30%;
+    padding: 20px;
 }
 
 #message-form {
@@ -194,13 +233,14 @@ li span {
     color: #b5b0b9;
 }
 
-
 #chat {
-    width: 40%;
-    margin: auto;
-    margin-left: 20em;
-    overflow-y: scroll;
-    max-height: 500px;
+    width: 20%;
+    /* margin: auto;
+    margin-left: 1em; */
+    position: absolute;
+    right: 0;
+    /* overflow-y: scroll;
+    max-height: 500px; */
 }
 
 #messages-input {
